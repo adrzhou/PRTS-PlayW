@@ -6,7 +6,7 @@ library(reticulate)
 source('utils/draw_map.R')
 
 ui <- fluidPage(
-  titlePanel('PRTS-PLWRT', windowTitle = 'PRTS-PLWRT'),
+  titlePanel('PRTS-PlayW', windowTitle = 'PRTS-PlayW'),
   
   sidebarLayout(
     sidebarPanel(
@@ -46,7 +46,7 @@ ui <- fluidPage(
 
 server <- function(input, output) {
   output$map <- renderPlot({
-    draw_map('0-1')
+    draw_map('1-7')
   })
   
   output$tile <- renderText({
